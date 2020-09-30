@@ -1,0 +1,110 @@
+title: Python for beginners in Tieto Czech
+description: Learn Python from scratch. No previous experience needed.
+long_description: |
+
+time: 15:00-16:30
+default_time:
+  start: '15:00'
+  end: '16:30'
+canonical: false
+vars:
+  coach-present: true
+plan:
+- title: Installation
+  slug: install
+  date: 2020-10-01
+  materials:
+  - lesson: beginners/cmdline
+  - lesson: beginners/install
+  - lesson: beginners/install-editor
+  - lesson: git/install
+  - lesson: beginners/instant-hacking
+  - lesson: beginners/python2-python3
+
+- title: Lists and Tupples
+  slug: lists-and-tupples
+  date: 2020-10-06
+  materials:
+  - lesson: beginners/tieto-sequence
+  - lesson: beginners/tieto-lists
+  - lesson: beginners/tieto-tuples
+
+- title: Working with Strings
+  slug: strings
+  date: 2020-10-08
+  materials:
+  - lesson: beginners/tieto-strings
+
+- title: Dictionaries
+  slug: dictionaries
+  date: 2020-10-13
+  materials:
+  - lesson: beginners/tieto-dictionaries
+
+- title: Conditionals and Loops
+  slug: conditionals-loops
+  date: 2020-10-15
+  materials:
+  - lesson: beginners/tieto-conditionals-loops
+
+- title: Abstraction - Functions
+  slug: abstraction-functions
+  date: 2020-10-20
+  materials:
+  - lesson: beginners/tieto-functions
+
+- title: Abstraction - Classes
+  slug: abstraction-classes
+  date: 2020-10-22
+  materials:
+  - lesson: beginners/tieto-classes
+
+- title: Modules and Stuff
+  slug: modules-and-stuff
+  date: 2020-10-27
+  materials:
+  - lesson: beginners/tieto-modules
+
+- title: Files and Exceptions
+  slug: files-and-exceptions
+  date: 2020-10-29
+  materials:
+  - lesson: beginners/tieto-files
+  - lesson: beginners/tieto-exceptions
+
+- title: Testing
+  slug: testing
+  date: 2020-11-03
+  materials:
+  - lesson: beginners/tieto-testing
+
+- title: Network Programming
+  slug: network-programming
+  date: 2020-11-05
+  materials:
+  - lesson: beginners/tieto-networking
+
+- title: Regular Expressions
+  slug: regular-expressions
+  date: 2020-11-10
+  materials:
+  - lesson: beginners/tieto-fabric
+  - lesson: beginners/tieto-regular-expressions
+  - lesson: beginners/tieto-final-assignment
+    #  - lesson: beginners/tieto-logging
+
+- title: Working with databasis, logging, JSON and Yaml
+  slug: databasis-json-yaml
+  date: 2020-11-12
+  materials:
+  - lesson: beginners/tieto-packaging
+  - lesson: beginners/tieto-yaml
+  - lesson: beginners/tieto-json
+  #- lesson: beginners/tieto-databasis
+  #- lesson: beginners/tieto-logging
+
+    #- title: Wrapping all up
+    #  slug: wrapping-all-up
+    #  date: 2018-10-03
+    #  materials:
+    #  - lesson: beginners/tieto-wrapping-all-up
