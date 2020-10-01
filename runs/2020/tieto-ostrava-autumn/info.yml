@@ -14,7 +14,7 @@ plan:
   slug: install
   date: 2020-10-01
   materials:
-  - lesson: beginners/cmdline
+  #- lesson: beginners/cmdline
   - lesson: beginners/install
   - lesson: beginners/install-editor
   - lesson: git/install

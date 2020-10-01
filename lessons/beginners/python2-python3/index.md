@@ -1,7 +1,7 @@
-## Základní rozdíly mezi Python 2 a Python 3
+## Differences betweenPython 2 and Python 3
 
-### Funkce print()
-Jedná se o pravděpodobně nejviditelnější změnu mezi Python 2 a Python 3. Příkaz *print* z Python 2 byl v Python 3 nahrazen funkcí *python()*.
+### print() is a function
+Probably most visible diffenrence between Python 2 and Python 3. Command *print* has been replaced by *function* print()
 
 
 **Python 2**
@@ -44,9 +44,9 @@ File "<ipython-input-3-139a7c5835bd>", line 1
 SyntaxError: invalid syntax
 ```
 
-### Dělení celými čísly
+### Division by integers
 
-Dělení celými čísly se chová rúzným způsobem v Python 2 a v Python 3.
+Integer division behaves differently in Python 2 and Python 3.
 
 **Python 2**
 
@@ -80,13 +80,13 @@ print('3 // 2.0 =', 3 // 2.0)
 3 // 2.0 = 1.0
 ```
 
-### Podpora Unicode
+### Unicode Support
 
-Python 2 má separátní typy pro str(), jedná se o ASCII znaky a dále pak unicode(). V Python 3 jsou všechny řetězce str() standardně Unicode znaky. Dále pak Python 3 zavádí podporu *byte*.
+Python 2 has separate types for str (), these are ASCII characters and then unicode (). In Python 3, all str () strings are Unicode characters by default. Next, Python 3 introduces byte support.
 
-### Vyvolání výjimky
+### Raise an exception
 
-V Python 2 jsou možné dvě možnosti jak vyvolat výjimku. Python 3 umožňuje jen jednu.
+In Python 2, there are two ways to raise an exception. Python 3 allows only one.
 
 **Python 2**
 
@@ -114,7 +114,7 @@ IOError: file error
 
 **Python 3**
 
-Následující způsob zápisu v Python 3 nefunguje:
+The following notation in Python 3 does not work:
 
 ```
 raise IOError, "file error"
@@ -127,7 +127,7 @@ raise IOError, "file error"
                  ^
 SyntaxError: invalid syntax
 ```
-Jediný správný zápis je tento:
+The only correct entry is this:
 
 ```
 raise IOError("file error")
@@ -140,9 +140,9 @@ Traceback (most recent call last):
 OSError: file error
 ```
 
-### Ošetřování výjimek
+### Exception handling
 
-Oštřování výjimek se také změnilo. Podívej se, jak se ošetřují výjimky v Python 2 a v Python 3.
+The treatment of exceptions has also changed. See how exceptions are handled in Python 2 and Python 3.
 
 **Python 2**
 
@@ -170,9 +170,9 @@ except NameError as err:
 name 'let_us_cause_a_NameError' is not defined --> our error message
 ```
 
-### Uživatelské vstupy
+### User inputs
 
-V Pythonu 2 existují dva způsoby, jak získat vstup od uživatele. Funkce *input()* a funkce *raw_input()*. Problém ve funkci *input()* je, že může být potenciálně nebezpečná, protože nevrací vždy typ *string*.
+In Python 2, there are two ways to get user input. input() function and raw_input() function. The problem with the input() function is that it can be potentially dangerous because it does not always return a string.
 
 **Python 2**
 
