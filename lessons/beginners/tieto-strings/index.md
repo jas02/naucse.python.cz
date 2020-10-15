@@ -1,8 +1,8 @@
-## Řetězce (Strings)
+## Strings
 
-Všechny standarní sekvenční operace (indexing, slicing, multiplication, membership, length, minimum, maximum) jsou použitelné také u řetězců.
+All standard sequential operations (indexing, slicing, multiplication, membership, length, minimum, maximum) are also applicable to strings.
 
-Pamatujte ale, že řetězce jsou immutable, proto následující kód nebude fungovat.
+Keep in mind, however, that strings are immutable, so the following code will not work.
 
 ```
 >>> website = 'http://www.python.org'
@@ -13,11 +13,11 @@ Traceback (most recent call last):
 TypeError: object doesn't support slice assignment
 ```
 
-## Formátování řetězců
+## Formatting strings
 
-Jednou ze metod jak vytisknout a formátovat řetězce operátor %, tak jako v jazyce C.
+One of the methods is to print and format strings with the% operator, just like in C.
 
-Jako hodnoty, které chceme vytisknout můžeme použít string, integer, tuple nebo dictionary.
+We can use string, integer, tuple or dictionary as the values we want to print.
 
 ```
 >>> format = "Hello, %s. %s are you?"
@@ -26,9 +26,10 @@ Jako hodnoty, které chceme vytisknout můžeme použít string, integer, tuple 
 'Hello, world. How are you?'
 ```
 
-%s je tzv. *conversion specifiers*. Označují místa, kde se má vložit hodnoty z pravé strany přiřazení.
+%s is so called *conversion specifiers*. Indicates where to insert values from the right side of the assignment.
 
-Další možné použití:
+Other possible uscase:
+
 
 ```
 %s - string
@@ -36,7 +37,7 @@ Další možné použití:
 %f - floating point
 ```
 
-Nejnovější a doporučovaný způsob formátování řetězců je pomocí metody *format()*. Každé položka řetězce, kterou chceme formátovat je reprezentována složenými závorkami *{}* a může obsahovat jméno a také informace o tom, jak správně řetězec zformátovat.
+The latest and recommended way to format strings is to use the *format()* method. Each string entry we want to format is represented by braces *{}* and can contain a name as well as information on how to format the string correctly.
 
 ```
 >>> "{}, {} and {}".format("first", "second", "third")
@@ -45,13 +46,13 @@ Nejnovější a doporučovaný způsob formátování řetězců je pomocí meto
 'first, second and third'
 ```
 
-Můžeme formátovat i takto:
+We can also format as follows:
 
 ```
 >>> "{3} {0} {2} {1} {3} {0}".format("be", "not", "or", "to")
 'to be or not to be'
 ```
-Hodnoty můžeme také pojmenovávat:
+We can also name the values:
 
 
 ```
@@ -60,9 +61,9 @@ Hodnoty můžeme také pojmenovávat:
 'π is approximately 3.14.'
 ```
 
-*.2f* znamená, že číslo bude vytištěno s přesností na dvě desetinná místa.
+*.2f* means that the number will be printed to two decimal places.
 
-Od Pythonu 3.6 můžeme formátovat řetězec i takto:
+As of Python 3.6, we can also format a string as follows:
 
 ```
 >>> from math import e
@@ -70,7 +71,7 @@ Od Pythonu 3.6 můžeme formátovat řetězec i takto:
 "Euler's constant is roughly 2.718281828459045."
 ```
 
-Další možnost je například takováto:
+For example, another option is:
 
 ```
 >>> name = 'Fred'
@@ -79,7 +80,7 @@ Další možnost je například takováto:
 He said his name is Fred and he is 42 years old.
 ```
 
-Můžeme dokonce použít ve složených závorkách i Python výrazy a metody:
+We can even use Python expressions and methods in braces:
 
 ```
 >>> name = 'Fred'
@@ -89,14 +90,14 @@ Můžeme dokonce použít ve složených závorkách i Python výrazy a metody:
 'He said his name is FRED\n    and he is 42 years old.'
 ```
 
-Starší ekvivalent stejného kódu je: 
+The older equivalent of the same code is:
 
 ```
 >>> "Euler's constant is roughly {e}.".format(e=e)
 "Euler's constant is roughly 2.718281828459045."
 ```
 
-Formátování řetězců (funkce format) používá templatovací jazyk. Každá hodnota, která má být nahrazena je uložená ve složených uvozovkách *{}*, tzv *replacement fields*. Poud chceme vypsat ve výpisu složené uvozovky, musíme to udělat takto:
+String formatting (format function) uses a tempo language. Each value to be replaced is stored in compound quotation marks *{}*, called *replacement fields*. If we want to list the compound quotes in the list, we have to do it like this:
 
 {% raw %}
 ```
@@ -107,26 +108,26 @@ Formátování řetězců (funkce format) používá templatovací jazyk. Každ�
 
 ###  Replacement Fields
 
-Skládají se z:
+They consist of:
 
-**Field name** - index nebo indentifikátor
+**Field name** - index or identifier
 
-**Conversion flag** - Vykřičník následovaný jedním znakem
+**Conversion flag** - Exclamation mark followed by one character
 
 * r - repr
 * s - string
 * a - ascii
 
-**Format specifier** - dojtečka následovaná výrazem templatovacího jazyka
+**Format specifier** - a colon followed by an expression of the templating language
 
-Příklady použití:
+Examples:
 
 ```
 >>> "{foo} {} {bar} {}".format(1, 2, bar=4, foo=3)
 '3 1 4 2'
 ```
 
-Můžeme přistupovat také jen k části hodnoty (pole), kterou chceme vytisknout:
+We can also access only the part of the value (field) that we want to print:
 
 ```
 >>> fullname = ["Alfred", "Hitchcock"]
@@ -134,7 +135,7 @@ Můžeme přistupovat také jen k části hodnoty (pole), kterou chceme vytiskno
 'Mr Hitchcock'
 ```
 
-### Základní konverze
+### Basic conversion
 
 ```
 >>> print("{pi!s} {pi!r} {pi!a}".format(pi="π"))
@@ -161,13 +162,12 @@ Binary *format specifier*
 
 * b - binary
 * c - integer
-* d - integer vytiskne jako decimal
-* f - decimal s fixním počtem desetinných míst
-* o - integer jako osmičkové číslo
+* d - integer print as decimal
+* f - decimal with a fixed number of decimal places
+* o - integer as an octal number
 
-Více v dokumentaci.
 
-### Šířka zarovnání
+### Alignment width
 
 ```
 >>> "{num:10}".format(num=3)
@@ -183,21 +183,21 @@ Více v dokumentaci.
 'Pi is 3.14'
 ```
 
-Formátování se zarovnáním:
+Aligned formatting:
 
 ```
 >>> "{pi:10.2f}".format(pi=pi)
 '      3.14'
 ```
 
-Přesnost zarovnání se dá použít také takto:
+Alignment accuracy can also be used as follows:
 
 ```
 >>> "{:.5}".format("Guido van Rossum")
 'Guido'
 ```
 
-Můžeme specifikovat několik typů zarovnání.
+We can specify several types of alignment.
 
 Zero-padded:
 
@@ -206,7 +206,7 @@ Zero-padded:
 '0000003.14'
 ```
 
-Levé, pravé a vycentrované:
+Left, right, centered:
 
 ```
 >>> print('{0:<10.2f}\n{0:^10.2f}\n{0:>10.2f}'.format(pi))
@@ -215,14 +215,14 @@ Levé, pravé a vycentrované:
       3.14
 ```
 
-Můžeme specifikovat jakým znakem vyplníme volné místa, jako náhradu za mezeru:
+We can specify with which character we fill in the blanks, as a replacement for the space:
 
 ```
 >>> "{:$^15}".format(" I WON ")
 '$$$$ I WON $$$$'
 ```
 
-Jak formátovat čísla se znaménky?
+How to format signed numbers?
 
 ```
 >>> print('{0:-.2}\n{1:-.2}'.format(pi, -pi)) # Default
@@ -236,7 +236,7 @@ Jak formátovat čísla se znaménky?
 -3.1
 ```
 
-Praktický příklad:
+Practical example:
 
 {% raw %}
 
@@ -269,7 +269,7 @@ print('=' * width)
 {% endraw %}
 
 
-Výstup:
+Output:
 
 ```
 Please enter  width: 35
@@ -284,7 +284,7 @@ Prunes (4 lbs.)               12.00
 ===================================
 ```
 
-## Metody řetězců
+## String methods
 
 ### center()
 
@@ -297,7 +297,7 @@ Prunes (4 lbs.)               12.00
 
 ### find()
 
-Vrací levý index, na kterém našel výskyt řetězce.
+Returns the left index on which the string was found.
 
 ```
 >>> 'With a moo-moo here, and a moo-moo there'.find('moo')
@@ -331,22 +331,22 @@ TypeError: sequence item 0: expected string, int found
 >>> print('C:' + '\\'.join(dirs))
 C:\usr\bin\env
 ```
-Inverzní funkce je *split()*.
+Inverse function is *split()*.
 
 ### lower()
 
-Vrací lowercase verzi řetězce:
+Returns the lowercase version of the string:
 
 ```
 >>> 'Dance Floor'.lower()
 'dance floor'
 ```
 
-Reverzní funkce *upper()*.
+Reverse function is *upper()*.
 
 ### replace()
 
-Všechny výskyty hledaného řetězce jsou nahrazeny.
+All occurrences of the search string are replaced.
 
 ```
 >>> 'This is a test'.replace('is', 'eez')
@@ -366,7 +366,7 @@ Všechny výskyty hledaného řetězce jsou nahrazeny.
 
 ### strip()
 
-Vrací řetězec bez prázdných znaků na začátku a na konci.
+Returns a string without spaces at the beginning and end.
 
 ```
 >>> '    internal whitespace is kept    '.strip()
