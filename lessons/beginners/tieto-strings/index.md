@@ -97,7 +97,7 @@ The older equivalent of the same code is:
 "Euler's constant is roughly 2.718281828459045."
 ```
 
-String formatting (format function) uses a tempo language. Each value to be replaced is stored in compound quotation marks *{}*, called *replacement fields*. If we want to list the compound quotes in the list, we have to do it like this:
+String formatting (format function) uses a template language. Each value to be replaced is stored in compound quotation marks *{}*, called *replacement fields*. If we want to list the compound quotes in the list, we have to do it like this:
 
 {% raw %}
 ```
